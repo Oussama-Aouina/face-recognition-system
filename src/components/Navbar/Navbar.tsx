@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
-import { IoCloseCircleOutline, IoMenu } from "react-icons/io5";
+import Link from "next/link";
 import { useState } from "react";
+import { IoCloseCircleOutline, IoMenu } from "react-icons/io5";
 import Menu from "./Menu";
 export default function Navbar(): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState<true | false>(false);
@@ -32,7 +32,7 @@ export default function Navbar(): JSX.Element {
 
       {!isMenuOpen ? (
         <IoMenu
-          className="text-4xl cursor-pointer max-md:block"
+          className="hidden text-4xl cursor-pointer max-md:block"
           onClick={handleMenu}
         />
       ) : (
