@@ -22,7 +22,7 @@ function Menu({ closeMenu }: Readonly<{ closeMenu: Function }>): JSX.Element {
                     <Link href="/">Documentation</Link>
                 </li>
                 <li className="flex w-full cursor-pointer  justify-center border-b border-slate-400 py-5">
-                    <Link href="/register">How It Work</Link>
+                    <Link href="/">How It Work</Link>
                 </li>
             </ul>
         </div>

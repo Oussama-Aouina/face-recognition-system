@@ -1,9 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { AiOutlineCamera, AiOutlineFileAdd } from 'react-icons/ai';
 import { FiUploadCloud } from 'react-icons/fi';
-import Image from 'next/image';
 
 interface Image {
     name: string;
@@ -52,6 +52,7 @@ export default function FilesDisplayer({
             url: URL.createObjectURL(file),
         });
         activateComparing(true);
+        console.log(file);
     }
     function handleFileChange(e: any) {
         const file = e.target.files[0];
@@ -76,9 +77,9 @@ export default function FilesDisplayer({
     }
 
     return (
-        <div className="flex h-[425px] w-full border-spacing-10 flex-col gap-6 overflow-hidden rounded-xl border-2 border-dashed border-[#6B43FF] bg-[#021D42] ">
+        <div className=" animate-slidein flex h-[425px] w-full border-spacing-10 flex-col gap-6 overflow-hidden rounded-xl border-2 border-dashed border-[#6B43FF] bg-[#021D42] opacity-0 [--slidein-delay:500ms] ">
             <div className="bg-[#01132B] px-20 pt-2">
-                <ul className="flex w-full gap-4 max-lg:justify-center">
+                <ul className="max-lg:justify-center flex w-full gap-4">
                     <li
                         className="flex h-full flex-col-reverse 
                         items-center border-b-2 border-activeElement px-3 pb-2 text-sm font-normal text-activeElement "
@@ -131,7 +132,7 @@ export default function FilesDisplayer({
                     {
                         //if there are images we display them horizontally here
                         image && (
-                            <div className=" flex h-full w-full gap-4 p-4">
+                            <div className=" sm:flex-row flex h-full w-full flex-col gap-4 p-4">
                                 <div className="relative h-full w-full border border-red-600">
                                     <Image
                                         src={image.url}

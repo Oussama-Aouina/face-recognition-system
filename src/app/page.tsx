@@ -1,9 +1,8 @@
 import { Metadata } from 'next';
 import './globals.css';
 
-import Navbar from '@/components/Navbar/Navbar';
-import RecognitionSystem from '@/components/RecognitionSystem/RecognitionSystem';
 import DefaultLayout from '@/components/DefaultLayout/DefaultLayout';
+import RecognitionSystem from '@/components/RecognitionSystem/RecognitionSystem';
 export const metadata: Metadata = {
     title: 'Recognizer',
     description: 'Facial recognition system',

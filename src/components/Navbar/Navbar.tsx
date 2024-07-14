@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { IoCloseCircleOutline, IoMenu } from 'react-icons/io5';
 import Menu from './Menu';
-import { useEffect } from 'react';
 export default function Navbar(): JSX.Element {
     const [isMenuOpen, setIsMenuOpen] = useState<true | false>(false);
     const handleMenu = () => {
@@ -12,7 +11,7 @@ export default function Navbar(): JSX.Element {
     };
 
     return (
-        <nav className="z-10 flex w-full items-center justify-between px-20 py-5 ">
+        <nav className="sm:px-20 z-10 flex w-full items-center justify-between px-5 py-5 ">
             <Link href="/" className=" flex items-center gap-2">
                 <Image
                     src="/images/logo/logo.png"
