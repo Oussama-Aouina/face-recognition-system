@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import { transform } from 'next/dist/build/swc';
+
 module.exports = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,6 +9,11 @@ module.exports = {
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
+        screens: {
+            md: '1000px',
+            sm: '640px',
+            lg: '1200px',
+        },
         extend: {
             colors: {
                 background: '#072B5B',
@@ -19,7 +26,22 @@ module.exports = {
                 statColor: '#7D6AEE',
             },
             backgroundImage: {},
+            keyframes: {
+                slidein: {
+                    from: {
+                        opacity: '0',
+                        transform: 'translateY(-10px)',
+                    },
+                    to: {
+                        opacity: '1',
+                        transform: 'translateY(0)',
+                    },
+                },
+            },
+            animation: {
+                slidein: 'slidein 0.5s ease var(--slidein-delay,0) forwards',
+            },
         },
     },
-    plugins: [],
+    plugins: [require('tailwindcss-animation-delay')],
 };
