@@ -11,19 +11,19 @@ export default function ResultDisplayer({
             <ul className="flex items-center justify-around gap-8 max-md:flex-col ">
                 <li className="animate-slidein flex items-center justify-start gap-4 opacity-0 [--slidein-delay:200ms] md:flex-col">
                     <p className="text-xl">Full name</p>
-                    <span className="text-resultText">Mihed Hassine</span>
+                    <span className="text-resultText">Oussama Aouina</span>
                 </li>
                 <li className="animate-slidein flex  items-center justify-start gap-4 opacity-0 [--slidein-delay:300ms] md:flex-col">
                     <p className="text-xl">Id number</p>
-                    <span className="text-resultText">11122111</span>
+                    <span className="text-resultText">11425540</span>
                 </li>
                 <li className="animate-slidein flex items-center justify-start gap-4 opacity-0 [--slidein-delay:400ms] md:flex-col">
                     <p className="text-xl">Birthday</p>
-                    <span className="text-resultText">14 Mai 2001</span>
+                    <span className="text-resultText">14 Jan 2002</span>
                 </li>
                 <li className="animate-slidein flex items-center justify-start gap-4 opacity-0 [--slidein-delay:500ms] md:flex-col">
                     <p className="text-xl">Adress</p>
-                    <span className="text-resultText">Mehdia</span>
+                    <span className="text-resultText">Bizerte</span>
                 </li>
             </ul>
         </div>
