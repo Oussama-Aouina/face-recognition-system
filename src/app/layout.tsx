@@ -1,28 +1,23 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Inter, Roboto } from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Recognizer",
-  description: "Facial recognition system",
-  icons: {
-    apple: ["/images/favicons/apple-icon.png"], // Fix: Add the 'appleTouchIcon' property with the correct value
-    icon: ["/images/favicons/favicon.ico?v4"],
-    shortcut: ["/images/favicons/apple-icon.png?v4"],
-  },
-  manifest: "/images/favicons/site.webmanifest",
-};
+const roboto = Roboto({
+    weight: ['400', '700'],
+    style: ['normal', 'italic'],
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={`${roboto.className} h-full w-full bg-background`}>
+                {children}
+            </body>
+        </html>
+    );
 }
